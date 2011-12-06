@@ -26,13 +26,14 @@
  */
 
 #define UNDERCLOCK_30720
-#define UNDERCLOCK_61440
 //#define UNDERCLOCK_49152
+#define UNDERCLOCK_61440
 //#define OVERCLOCK_614400
 //#define OVERCLOCK_633600
 #define OVERCLOCK_652800
 #define OVERCLOCK_672000
-//#define OVERCLOCK_691200
+#define OVERCLOCK_691200
+
 
 #include <linux/version.h>
 #include <linux/kernel.h>
@@ -194,10 +195,10 @@ static struct clkctl_acpu_speed pll0_196_pll1_960_pll2_1056[] = {
 static struct clkctl_acpu_speed pll0_245_pll1_960_pll2_1200[] = {
 	{ 0, 19200, ACPU_PLL_TCXO, 0, 0, 19200, 0, 0, 30720 },
 #ifdef UNDERCLOCK_30720
-	{ 1,  30720, ACPU_PLL_0, 4, 7,  15360, 1, 1,  30720 },
+	{ 1,  30720, ACPU_PLL_0, 4, 7,  15360, 1, 1,  15360 },
 #endif
 #ifdef UNDERCLOCK_49152
-	{ 1,  49152, ACPU_PLL_0, 4, 4,  24576, 1, 2,  30720 },
+	{ 1,  49152, ACPU_PLL_0, 4, 4,  24576, 1, 2,  24576 },
 #endif
 #ifdef UNDERCLOCK_61440
 	{ 1,  61440, ACPU_PLL_0, 4, 3,  30720, 1, 2,  30720 },
@@ -222,8 +223,8 @@ static struct clkctl_acpu_speed pll0_245_pll1_960_pll2_1200[] = {
  #ifdef OVERCLOCK_672000
          { 1, 672000, ACPU_PLL_2, 2, 1, 200000, 2, 7, 122880 },
  #endif
- #ifdef OVERCLOCK_691200
-         { 1, 691200, ACPU_PLL_2, 2, 1, 200000, 2, 7, 122880 },
+ #ifdef OCERCLOCK_691200
+         { 1, 691000, ACPU_pll_2, 2, 1, 200000, 2, 7, 122880 },
  #endif
 	{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0}, {0, 0, 0} }
 };
