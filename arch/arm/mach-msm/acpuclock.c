@@ -29,10 +29,10 @@
 //#define UNDERCLOCK_49152
 #define UNDERCLOCK_61440
 //#define OVERCLOCK_614400
-//#define OVERCLOCK_633600
+#define OVERCLOCK_633600
 #define OVERCLOCK_652800
 #define OVERCLOCK_672000
-#define OVERCLOCK_691200
+//#define OVERCLOCK_691200
 
 
 #include <linux/version.h>
@@ -224,7 +224,7 @@ static struct clkctl_acpu_speed pll0_245_pll1_960_pll2_1200[] = {
          { 1, 672000, ACPU_PLL_2, 2, 1, 200000, 2, 7, 122880 },
  #endif
  #ifdef OCERCLOCK_691200
-         { 1, 691000, ACPU_pll_2, 2, 1, 200000, 2, 7, 122880 },
+         { 1, 691200, ACPU_pll_2, 2, 1, 200000, 2, 7, 122880 },
  #endif
 	{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, {0, 0, 0}, {0, 0, 0} }
 };
