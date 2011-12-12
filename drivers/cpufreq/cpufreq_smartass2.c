@@ -43,7 +43,7 @@
  * towards the ideal frequency and slower after it has passed it. Similarly,
  * lowering the frequency towards the ideal frequency is faster than below it.
  */
-#define DEFAULT_AWAKE_IDEAL_FREQ 528000
+#define DEFAULT_AWAKE_IDEAL_FREQ 245760
 static unsigned int awake_ideal_freq;
 
 /*
@@ -68,7 +68,7 @@ static unsigned int ramp_up_step;
  * Zero disables and will calculate ramp down according to load heuristic.
  * When above the ideal freqeuncy we always ramp down to the ideal freq.
  */
-#define DEFAULT_RAMP_DOWN_STEP 0
+#define DEFAULT_RAMP_DOWN_STEP 128000
 static unsigned int ramp_down_step;
 
 /*
